@@ -154,10 +154,10 @@ a { text-decoration: none; }
 .ticker-track span {
   font-family: 'Rajdhani', sans-serif;
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 3px;
+  font-size: 1.15rem;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: #1a0005;
+  color: #ffffff;
 }
 
 .ticker-dot {
