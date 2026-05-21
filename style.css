@@ -457,15 +457,37 @@ a { text-decoration: none; }
   flex-shrink: 0;
 }
 
+@property --story-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .story-ring {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), #8a0000);
   padding: 3px;
+  background: conic-gradient(
+    from var(--story-angle),
+    #CC0000,
+    #FF6600,
+    #FFD000,
+    #33AF23,
+    #33AF23,
+    #FFD000,
+    #FF6600,
+    #CC0000
+  );
+  animation: story-ring-spin 2.5s linear infinite;
   transition: transform 0.2s;
 }
-.story-bubble:hover .story-ring { transform: scale(1.08); }
+.story-bubble:hover .story-ring { transform: scale(1.1); }
+
+@keyframes story-ring-spin {
+  from { --story-angle: 0deg; }
+  to   { --story-angle: 360deg; }
+}
 
 .story-ring-inner {
   width: 100%;
