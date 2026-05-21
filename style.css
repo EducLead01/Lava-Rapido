@@ -1,7 +1,7 @@
 /* ===== GLOBAL ===== */
 :root {
-  --primary: #FF014F;
-  --primary-hover: #cc003f;
+  --primary: #CC0000;
+  --primary-hover: #a00000;
   --bg-dark: #0A0A0A;
   --bg-darker: #050505;
   --bg-gray: #111111;
@@ -134,7 +134,7 @@ a { text-decoration: none; }
 .ticker-wrap {
   position: relative;
   z-index: 999;
-  background: linear-gradient(90deg, #c8320a 0%, #FF014F 50%, #c8320a 100%);
+  background: linear-gradient(90deg, #8a0000 0%, #CC0000 50%, #8a0000 100%);
   overflow: hidden;
   height: 44px;
   display: flex;
