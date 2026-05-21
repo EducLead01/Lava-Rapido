@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lava Rápido — Lavagem e Estética Automotiva</title>
+  <meta name="description" content="Lava Rápido especializado em lavagem completa, polimento, higienização interna e muito mais. Agende agora!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="logo-text">LAVA <span class="text-primary">RÁPIDO</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="servicos.html">Serviços</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="servicos.html#lavagem">Lavagem Completa</a></li>
+                <li><a class="dropdown-item" href="servicos.html#polimento">Polimento</a></li>
+                <li><a class="dropdown-item" href="servicos.html#higienizacao">Higienização Interna</a></li>
+                <li><a class="dropdown-item" href="servicos.html#motor">Limpeza de Motor</a></li>
+                <li><a class="dropdown-item" href="servicos.html#cristalizacao">Cristalização</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-whatsapp" href="https://wa.me/5511999999999" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" class="me-1"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative z-1">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7">
+          <p class="hero-tag">Lavagem & Estética Automotiva</p>
+          <h1 class="hero-title">Seu Carro Merece o <span class="text-primary">Melhor</span> Cuidado</h1>
+          <p class="hero-subtitle">Lavagem profissional, polimento técnico, higienização interna e muito mais. Atendimento personalizado para preservar a beleza do seu veículo.</p>
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary btn-lg">Agendar Agora</a>
+            <a href="servicos.html" class="btn btn-outline-light btn-lg">Ver Serviços</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="section-dark py-5" id="servicos">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-tag">Nossos Serviços</p>
+        <h2 class="section-title">Serviços de <span class="text-primary">Lavagem e Estética</span> Automotiva</h2>
+        <p class="section-desc">Veja abaixo alguns dos nossos serviços mais especializados. Entre em contato para saber mais.</p>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">🚿</div>
+            <h3>Lavagem Completa</h3>
+            <p>Lavagem externa e interna detalhada, preservando a pintura e deixando o carro impecável.</p>
+            <a href="servicos.html#lavagem" class="btn btn-primary-outline">Ver Mais</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">✨</div>
+            <h3>Polimento Técnico</h3>
+            <p>Processo de polimento que restaura o brilho e remove pequenas imperfeições da pintura do seu carro.</p>
+            <a href="servicos.html#polimento" class="btn btn-primary-outline">Ver Mais</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">🪑</div>
+            <h3>Higienização Interna</h3>
+            <p>Limpeza detalhada do interior do veículo, eliminando sujeiras e odores para um ambiente mais saudável.</p>
+            <a href="servicos.html#higienizacao" class="btn btn-primary-outline">Ver Mais</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3>Limpeza de Motor</h3>
+            <p>Serviço de limpeza minuciosa do motor, removendo sujeiras e garantindo melhor desempenho.</p>
+            <a href="servicos.html#motor" class="btn btn-primary-outline">Ver Mais</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">💎</div>
+            <h3>Cristalização</h3>
+            <p>Proteção avançada da pintura com cristalização, garantindo brilho duradouro e maior resistência.</p>
+            <a href="servicos.html#cristalizacao" class="btn btn-primary-outline">Ver Mais</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">🌞</div>
+            <h3>Película Solar</h3>
+            <p>Proteção contra calor e raios UV, proporcionando mais conforto e privacidade no interior.</p>
+            <a href="servicos.html#pelicula" class="btn btn-primary-outline">Ver Mais</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-5">
+        <a href="contato.html" class="btn btn-primary btn-lg px-5">Entre em Contato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="section-gray py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <p class="section-tag">Consulte Valores pelo WhatsApp</p>
+        <h2 class="section-title">Planos de <span class="text-primary">Lavagem</span></h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="plan-card">
+            <div class="plan-badge">Básico</div>
+            <h3 class="plan-title">Consulte <br><span class="text-primary">Agora</span></h3>
+            <ul class="plan-list">
+              <li>Lavagem Externa</li>
+              <li>Aspiração</li>
+              <li>Limpeza de Vidros</li>
+            </ul>
+            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary w-100">Consultar</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="plan-card plan-featured">
+            <div class="plan-badge">Completo</div>
+            <h3 class="plan-title">Consulte <br><span class="text-primary">Agora</span></h3>
+            <ul class="plan-list">
+              <li>Lavagem Completa</li>
+              <li>Higienização Interna</li>
+              <li>Polimento Leve</li>
+              <li>Cera de Proteção</li>
+            </ul>
+            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary w-100">Consultar</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="plan-card">
+            <div class="plan-badge">Premium</div>
+            <h3 class="plan-title">Consulte <br><span class="text-primary">Agora</span></h3>
+            <ul class="plan-list">
+              <li>Pacote Completo</li>
+              <li>Polimento Técnico</li>
+              <li>Cristalização</li>
+              <li>Limpeza de Motor</li>
+              <li>Película Solar</li>
+            </ul>
+            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary w-100">Consultar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE (MINI) -->
+  <section class="section-dark py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="section-tag">Quem Somos</p>
+          <h2 class="section-title">O <span class="text-primary">Melhor Cuidado</span> para o Seu Veículo</h2>
+          <p class="text-muted-custom mt-3">Com anos de experiência no mercado automotivo, somos especialistas em lavagem e estética de veículos. Nosso compromisso é entregar resultados impecáveis com atendimento personalizado e transparente.</p>
+          <p class="text-muted-custom">Com o lema <strong class="text-white">"de quem cuida para quem cuida"</strong>, cada serviço é realizado com dedicação e excelência.</p>
+          <div class="stats-row mt-4">
+            <div class="stat-item">
+              <span class="stat-number">+500</span>
+              <span class="stat-label">Carros Atendidos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4.9★</span>
+              <span class="stat-label">Avaliação Google</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+3</span>
+              <span class="stat-label">Anos no Mercado</span>
+            </div>
+          </div>
+          <a href="sobre.html" class="btn btn-primary mt-4">Saiba Mais</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-img-placeholder">
+            <span>📸 Foto da Empresa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section-gray py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">O Que Nossos <span class="text-primary">Clientes</span> Dizem</h2>
+        <p class="section-desc">Confira os depoimentos de quem já experimentou nossos serviços.</p>
+        <div class="rating-badge mt-3">
+          <span class="rating-score">4.9</span>
+          <span class="rating-stars">★★★★★</span>
+          <span class="rating-count">(+80 avaliações)</span>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Excelente atendimento e serviço de lavagem ficou impecável. Super recomendado!"</p>
+            <div class="reviewer">— João Silva</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Me senti muito segura, o atendimento foi transparente e o resultado foi incrível. Meu carro ficou como novo!"</p>
+            <div class="reviewer">— Maria Oliveira</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>"Atendimento e serviço incrível! Desde a primeira interação me ajudaram com todas as dúvidas."</p>
+            <div class="reviewer">— Pedro Santos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA WHATSAPP -->
+  <section class="cta-section py-5">
+    <div class="container text-center">
+      <h2 class="cta-title">Pronto para Agendar?</h2>
+      <p class="cta-sub">Fale com a gente pelo WhatsApp e solicite seu orçamento agora mesmo.</p>
+      <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-whatsapp btn-lg mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" class="me-2"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+        Fale pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <span class="logo-text footer-logo">LAVA <span class="text-primary">RÁPIDO</span></span>
+          <p class="mt-3 text-muted-custom">Especialistas em lavagem e estética automotiva. Cuidamos do seu carro com dedicação e excelência.</p>
+        </div>
+        <div class="col-lg-2 col-sm-4">
+          <h5 class="footer-heading">Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <h5 class="footer-heading">Serviços</h5>
+          <ul class="footer-links">
+            <li><a href="servicos.html#lavagem">Lavagem Completa</a></li>
+            <li><a href="servicos.html#polimento">Polimento</a></li>
+            <li><a href="servicos.html#higienizacao">Higienização</a></li>
+            <li><a href="servicos.html#motor">Limpeza de Motor</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <h5 class="footer-heading">Contato</h5>
+          <ul class="footer-links">
+            <li>📍 Seu endereço aqui</li>
+            <li>📞 (11) 9 9999-9999</li>
+            <li>✉️ contato@lavarapido.com.br</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-hr mt-4">
+      <p class="text-center text-muted-custom small mb-0">© 2026 Lava Rápido. Todos os Direitos Reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
