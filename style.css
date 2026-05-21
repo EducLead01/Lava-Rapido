@@ -129,11 +129,52 @@ a { text-decoration: none; }
 }
 .btn-whatsapp:hover { background: #2a9a1c; color: #fff; transform: translateY(-1px); }
 
+/* ===== TICKER ===== */
+.ticker-wrap {
+  position: relative;
+  z-index: 999;
+  background: linear-gradient(90deg, #c8320a 0%, #FF014F 50%, #c8320a 100%);
+  overflow: hidden;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  margin-top: 72px;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  animation: ticker-scroll 22s linear infinite;
+  will-change: transform;
+}
+
+.ticker-track span {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1a0005;
+}
+
+.ticker-dot {
+  font-size: 1rem !important;
+  letter-spacing: 0 !important;
+  opacity: 0.6;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ===== HERO ===== */
 .hero-section {
   position: relative;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 50%, #0a0a0a 100%);
-  padding-top: 80px;
+  padding-top: 0;
   overflow: hidden;
 }
 
