@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -76,6 +76,88 @@
       </div>
     </div>
   </section>
+
+  <!-- STORIES -->
+  <div class="stories-row">
+    <div class="stories-inner">
+
+      <button class="story-bubble" data-index="0">
+        <div class="story-ring">
+          <div class="story-ring-inner">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=120&q=80" alt="">
+          </div>
+        </div>
+        <span class="story-bubble-label">Lavagem</span>
+      </button>
+
+      <button class="story-bubble" data-index="1">
+        <div class="story-ring">
+          <div class="story-ring-inner">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&q=80" alt="">
+          </div>
+        </div>
+        <span class="story-bubble-label">Polimento</span>
+      </button>
+
+      <button class="story-bubble" data-index="2">
+        <div class="story-ring">
+          <div class="story-ring-inner">
+            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=120&q=80" alt="">
+          </div>
+        </div>
+        <span class="story-bubble-label">Interior</span>
+      </button>
+
+      <button class="story-bubble" data-index="3">
+        <div class="story-ring">
+          <div class="story-ring-inner">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=120&q=80" alt="">
+          </div>
+        </div>
+        <span class="story-bubble-label">Resultado</span>
+      </button>
+
+      <button class="story-bubble" data-index="4">
+        <div class="story-ring">
+          <div class="story-ring-inner">
+            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=120&q=80" alt="">
+          </div>
+        </div>
+        <span class="story-bubble-label">Detalhe</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- STORY MODAL -->
+  <div class="story-modal" id="storyModal">
+    <div class="story-container" id="storyContainer">
+
+      <div class="story-progress" id="storyProgress"></div>
+
+      <div class="story-header">
+        <div class="story-header-avatar">LR</div>
+        <div>
+          <p class="story-header-name">Lava Rápido</p>
+          <p class="story-header-time">Dia a dia</p>
+        </div>
+      </div>
+
+      <button class="story-close" id="storyClose">✕</button>
+
+      <img class="story-img" id="storyImg" src="" alt="">
+
+      <div class="story-text-overlay">
+        <div class="story-tag" id="storyTag"></div>
+        <p class="story-title" id="storyTitle"></p>
+        <p class="story-sub" id="storySub"></p>
+      </div>
+
+      <button class="story-arrow story-arrow-prev" id="storyPrev">&#8592;</button>
+      <button class="story-arrow story-arrow-next" id="storyNext">&#8594;</button>
+
+    </div>
+  </div>
 
   <!-- SERVIÇOS -->
   <section class="section-dark py-5" id="servicos">
@@ -261,5 +343,128 @@
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const stories = [
+      {
+        img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=85',
+        tag: 'Lavagem',
+        title: 'Espuma e Cuidado',
+        sub: 'Lavagem técnica que preserva a pintura do seu veículo.'
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85',
+        tag: 'Polimento',
+        title: 'Brilho de Volta',
+        sub: 'Polimento técnico que restaura o brilho original.'
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=900&q=85',
+        tag: 'Interior',
+        title: 'Higienização Interna',
+        sub: 'Interior limpo, sem odores e livre de bactérias.'
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=900&q=85',
+        tag: 'Resultado',
+        title: 'Como Saiu da Loja',
+        sub: 'Resultado impecável, carro brilhando.'
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=900&q=85',
+        tag: 'Detalhe',
+        title: 'Rodas e Detalhes',
+        sub: 'Atenção total a cada detalhe do seu veículo.'
+      }
+    ];
+
+    let current = 0;
+    let timer = null;
+    const DURATION = 5000;
+
+    const modal    = document.getElementById('storyModal');
+    const img      = document.getElementById('storyImg');
+    const tag      = document.getElementById('storyTag');
+    const title    = document.getElementById('storyTitle');
+    const sub      = document.getElementById('storySub');
+    const progress = document.getElementById('storyProgress');
+
+    function buildBars() {
+      progress.innerHTML = '';
+      stories.forEach((_, i) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'sp-wrap';
+        const fill = document.createElement('div');
+        fill.className = 'sp-fill';
+        fill.id = 'sp-' + i;
+        wrap.appendChild(fill);
+        progress.appendChild(wrap);
+      });
+    }
+
+    function showStory(index) {
+      current = index;
+      const s = stories[index];
+      img.src    = s.img;
+      tag.textContent   = s.tag;
+      title.textContent = s.title;
+      sub.textContent   = s.sub;
+
+      document.querySelectorAll('.sp-fill').forEach((f, i) => {
+        f.style.transition = 'none';
+        f.style.width = i < index ? '100%' : '0%';
+      });
+
+      clearTimeout(timer);
+      const fill = document.getElementById('sp-' + index);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          fill.style.transition = `width ${DURATION}ms linear`;
+          fill.style.width = '100%';
+        });
+      });
+
+      timer = setTimeout(() => {
+        if (current < stories.length - 1) showStory(current + 1);
+        else closeModal();
+      }, DURATION);
+    }
+
+    function openModal(index) {
+      buildBars();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      showStory(index);
+    }
+
+    function closeModal() {
+      clearTimeout(timer);
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.story-bubble').forEach(btn => {
+      btn.addEventListener('click', () => openModal(+btn.dataset.index));
+    });
+
+    document.getElementById('storyClose').addEventListener('click', closeModal);
+    document.getElementById('storyPrev').addEventListener('click', () => {
+      if (current > 0) showStory(current - 1);
+    });
+    document.getElementById('storyNext').addEventListener('click', () => {
+      if (current < stories.length - 1) showStory(current + 1);
+      else closeModal();
+    });
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'ArrowRight') document.getElementById('storyNext').click();
+      if (e.key === 'ArrowLeft')  document.getElementById('storyPrev').click();
+      if (e.key === 'Escape')     closeModal();
+    });
+  </script>
 </body>
 </html>
