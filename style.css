@@ -351,6 +351,49 @@ a { text-decoration: none; }
   margin-bottom: 20px;
 }
 
+/* ===== VALUES FLAGS ===== */
+.values-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.value-flag {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 20px 32px;
+  min-width: 260px;
+  flex: 1 1 240px;
+  max-width: 320px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.value-flag:hover {
+  transform: translateY(-3px);
+  border-left-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.value-flag-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.value-flag-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
 /* ===== PLAN CARDS ===== */
 .plan-card {
   background: var(--bg-card);
