@@ -140,36 +140,38 @@ a { text-decoration: none; }
 .ticker-wrap {
   position: relative;
   z-index: 999;
-  background: linear-gradient(90deg, #004299 0%, #0077E6 50%, #004299 100%);
+  background: linear-gradient(90deg, #003a99 0%, #0077E6 40%, #00AAFF 50%, #0077E6 60%, #003a99 100%);
   overflow: hidden;
-  height: 44px;
+  height: 56px;
   display: flex;
   align-items: center;
   margin-top: 72px;
+  box-shadow: 0 4px 24px rgba(0,119,230,0.45);
 }
 
 .ticker-track {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
   white-space: nowrap;
-  animation: ticker-scroll 22s linear infinite;
+  animation: ticker-scroll 18s linear infinite;
   will-change: transform;
 }
 
 .ticker-track span {
   font-family: 'Rajdhani', sans-serif;
   font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 4px;
+  font-size: 1.4rem;
+  letter-spacing: 6px;
   text-transform: uppercase;
   color: #ffffff;
+  text-shadow: 0 0 18px rgba(255,255,255,0.35);
 }
 
 .ticker-dot {
-  font-size: 1rem !important;
+  font-size: 1.1rem !important;
   letter-spacing: 0 !important;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 @keyframes ticker-scroll {
